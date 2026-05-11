@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "609577344516",
+    "project_id": "glicogotas-app-v2",
+    "storage_bucket": "glicogotas-app-v2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609577344516:android:b623b7d71b67010d771f51",
+        "android_client_info": {
+          "package_name": "com.example.glicogotas_appv2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3AQiq3V7F6Gnh3pXdAPk28ujUChQ9sdY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
