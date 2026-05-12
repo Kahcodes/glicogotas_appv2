@@ -79,8 +79,8 @@ class _Hipo2PageState extends State<Hipo2Page> with RouteAware {
                 top: 0.31.sh,
                 left: 0.02.sw,
                 right: 0.02.sw,
-                child: SvgPicture.asset(
-                  'assets/images/error.svg',
+                child: Image.asset(
+                  'assets/images/error.png',
                   width: 0.6.sw,
                   height: 0.6.sh,
                 ),

@@ -78,8 +78,8 @@ class Pagina3PageState extends State<Pagina3Page> with RouteAware {
               Positioned(
                 top: 0.25.sh, // Ajuste para mover para baixo
                 left: 0.03.sw,
-                child: SvgPicture.asset(
-                  'assets/images/lita-pancreas.svg',
+                child: Image.asset(
+                  'assets/images/lita-pancreas.png',
                   width: 0.5.sw,
                   height: 0.5.sh,
                 ),

@@ -77,8 +77,8 @@ class _Vovo7PageState extends State<Vovo7Page> with RouteAware {
                 top: 0.35.sh,
                 left: 0.02.sw,
                 right: 0.02.sw,
-                child: SvgPicture.asset(
-                  'assets/images/medica-vovo.svg',
+                child: Image.asset(
+                  'assets/images/medica-vovo.png',
                   width: 0.5.sw,
                   height: 0.5.sh,
                 ),

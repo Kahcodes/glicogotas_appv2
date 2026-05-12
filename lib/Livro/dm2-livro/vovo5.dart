@@ -78,8 +78,8 @@ class _Vovo5PageState extends State<Vovo5Page> with RouteAware {
                 top: 0.35.sh,
                 left: 0.02.sw,
                 right: 0.02.sw,
-                child: SvgPicture.asset(
-                  'assets/images/rei-pancreas.svg',
+                child: Image.asset(
+                  'assets/images/rei-pancreas.png',
                   width: 0.5.sw,
                   height: 0.5.sh,
                 ),

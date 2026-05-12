@@ -77,8 +77,8 @@ class _Hiper5PageState extends State<Hiper5Page> with RouteAware {
                 top: 0.35.sh,
                 left: 0.02.sw,
                 right: 0.02.sw,
-                child: SvgPicture.asset(
-                  'assets/images/Lita-irritada.svg',
+                child: Image.asset(
+                  'assets/images/Lita-irritada.png',
                   width: 0.5.sw,
                   height: 0.5.sh,
                 ),

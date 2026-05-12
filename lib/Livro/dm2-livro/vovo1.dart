@@ -230,8 +230,8 @@ class Vovo1Content extends StatelessWidget {
                 top: 0.25.sh,
                 left: 0.02.sw,
                 right: 0.02.sw,
-                child: SvgPicture.asset(
-                  'assets/images/lita-pensa.svg',
+                child: Image.asset(
+                  'assets/images/lita-pensa.png',
                   width: 0.6.sw,
                   height: 0.6.sh,
                 ),

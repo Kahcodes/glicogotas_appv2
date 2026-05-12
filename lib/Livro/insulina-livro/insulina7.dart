@@ -78,8 +78,8 @@ class _Insulina7PageState extends State<Insulina7Page> with RouteAware {
                 top: 0.32.sh,
                 left: 0.02.sw,
                 right: 0.02.sw,
-                child: SvgPicture.asset(
-                  'assets/images/insulinas.svg',
+                child: Image.asset(
+                  'assets/images/insulinas.png',
                   width: 0.6.sw,
                   height: 0.6.sh,
                 ),

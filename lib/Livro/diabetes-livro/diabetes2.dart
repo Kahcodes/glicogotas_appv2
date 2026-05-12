@@ -78,8 +78,8 @@ class _Diabetes2PageState extends State<Diabetes2Page> with RouteAware {
                 top: 0.35.sh,
                 left: 0.02.sw,
                 right: 0.02.sw,
-                child: SvgPicture.asset(
-                  'assets/images/lita-respondendo.svg',
+                child: Image.asset(
+                  'assets/images/lita-respondendo.png',
                   width: 0.5.sw,
                   height: 0.5.sh,
                 ),

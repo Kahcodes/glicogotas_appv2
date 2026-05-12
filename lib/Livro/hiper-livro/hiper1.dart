@@ -257,8 +257,8 @@ class Hiper1Content extends StatelessWidget {
                 top: 0.30.sh,
                 left: 0.02.sw,
                 right: 0.02.sw,
-                child: SvgPicture.asset(
-                  'assets/images/Pumps-anunciando.svg',
+                child: Image.asset(
+                  'assets/images/Pumps-anunciando.png',
                   width: 0.5.sw,
                   height: 0.5.sh,
                 ),
