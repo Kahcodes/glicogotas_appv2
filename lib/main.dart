@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:glicogotas_appv2/shared/repositories/configuracoes_repository.dart';
+import 'package:provider/provider.dart';
 import 'firebase_options.dart';
+import 'home.dart';
+
+final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,15 +23,30 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Glicogotas App'),
-        ),
-        body: const Center(
-          child: Text('Firebase conectado 🚀'),
-        ),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ConfiguracoesRepository()),
+      ],
+      child: ScreenUtilInit(
+        designSize: const Size(390, 844),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (context, child) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            navigatorObservers: [routeObserver],
+            builder: (context, widget) {
+              final mediaQuery = MediaQuery.of(context);
+              return MediaQuery(
+                data: mediaQuery.copyWith(
+                  textScaler: const TextScaler.linear(1.0),
+                ),
+                child: widget ?? const SizedBox(),
+              );
+            },
+            home: const TelaHome(),
+          );
+        },
       ),
     );
   }
