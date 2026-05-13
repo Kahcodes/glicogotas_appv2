@@ -71,6 +71,7 @@ flutter:
   assets:
     - assets/images/
     - assets/audio/
+    - assets/audio/audioPersonagens/
     - assets/audio/audios-diabtp2/
     - assets/audio/audios-hiperglicemia/
     - assets/audio/audios-hipoglicemia/

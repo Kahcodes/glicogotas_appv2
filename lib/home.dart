@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:glicogotas_appv2/Livro/cards.dart';
+import 'package:glicogotas_appv2/Personagens/glicogotas.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TelaHome extends StatelessWidget {
@@ -16,6 +17,12 @@ class TelaHome extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Image.asset(
+                  'assets/images/glicogotas_logo.png',
+                  height: 132,
+                  fit: BoxFit.contain,
+                ),
+                const SizedBox(height: 18),
                 Text(
                   'Glicogotas',
                   textAlign: TextAlign.center,
@@ -34,14 +41,9 @@ class TelaHome extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 40),
-                FilledButton(
-                  style: FilledButton.styleFrom(
-                    backgroundColor: const Color(0xFF265F95),
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 28,
-                      vertical: 16,
-                    ),
-                  ),
+                _HomeButton(
+                  label: 'Abrir livros',
+                  color: const Color(0xFF265F95),
                   onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
@@ -49,12 +51,53 @@ class TelaHome extends StatelessWidget {
                       ),
                     );
                   },
-                  child: const Text('Abrir livros'),
+                ),
+                const SizedBox(height: 16),
+                _HomeButton(
+                  label: 'Conhecer personagens',
+                  color: const Color(0xFFF4719C),
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => const PersonagensPage(),
+                      ),
+                    );
+                  },
                 ),
               ],
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class _HomeButton extends StatelessWidget {
+  const _HomeButton({
+    required this.label,
+    required this.color,
+    required this.onPressed,
+  });
+
+  final String label;
+  final Color color;
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 260,
+      child: FilledButton(
+        style: FilledButton.styleFrom(
+          backgroundColor: color,
+          padding: const EdgeInsets.symmetric(
+            horizontal: 28,
+            vertical: 16,
+          ),
+        ),
+        onPressed: onPressed,
+        child: Text(label),
       ),
     );
   }
