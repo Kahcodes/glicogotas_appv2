@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:glicogotas_appv2/Livro/cards.dart';
 import 'package:glicogotas_appv2/Personagens/glicogotas.dart';
+import 'package:glicogotas_appv2/Video/youtube_video_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TelaHome extends StatelessWidget {
@@ -12,10 +13,10 @@ class TelaHome extends StatelessWidget {
       backgroundColor: const Color(0xFFEAF7FF),
       body: SafeArea(
         child: Center(
-          child: Padding(
+          child: SingleChildScrollView(
             padding: const EdgeInsets.all(24),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Image.asset(
                   'assets/images/glicogotas_logo.png',
@@ -60,6 +61,18 @@ class TelaHome extends StatelessWidget {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (_) => const PersonagensPage(),
+                      ),
+                    );
+                  },
+                ),
+                const SizedBox(height: 16),
+                _HomeButton(
+                  label: 'Assistir video',
+                  color: const Color(0xFFE84242),
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => const YoutubeVideoPage(),
                       ),
                     );
                   },
